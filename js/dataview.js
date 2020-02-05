@@ -2,9 +2,9 @@
 
 (function(){
     const DATAFILES = {
-        areas: '/data/PermitsByAreaPoint.json',
-        blocks: '/data/PermitsByBlockPoint.json',
-        areaPolys: '/data/AreaPermitCount.geojson'
+        areas: 'data/PermitsByAreaPoint.json',
+        blocks: 'data/PermitsByBlockPoint.json',
+        areaPolys: 'data/AreaPermitCount.geojson'
     },
     ATTRIBUTES = {
         areas: {
