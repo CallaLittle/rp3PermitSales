@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/lib/leaflet/leaflet.css">
+    <link rel="stylesheet" href="/css/dataview.css">
+
+    <title>Changes in Madison Residential Permit Sales</title>
+  </head>
+  <body>
+    <!-- navigation and title -->
+    <nav class="navbar navbar-dark bg-dark shadow rounded-bottom z-500 stop-prop">
+        <a class="navbar-brand text-white">RP3 Permit Sales 2018 to 2019</a>
+    </nav>
+
+    <!-- map, graph, and controls -->
+    <div id="map" class="container-fluid text-white">
+
+        <!-- overlay control panel -->
+        <div class="row pt-3">
+
+            <div class="pl-3 pb-1 z-500 d-md-none">
+                <button title="Data Layers" class="btn btn-dark btn-sm" type="button" data-toggle="collapse" data-target="#dataControl" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle Data Control">
+                    <i class="fas fa-layer-group"></i>
+                </button">
+            </div>
+
+            <div id="dataControl" class="col-8 col-sm-6 col-md-3 col-lg-2 pb-2 pb-md-0 z-500 stop-prop collapse">
+                <div class="card bg-dark shadow custom-map-panel">
+                    <div class="card-body">
+                        <h6 class="card-title">Choose Map Layer</h6>
+                        <ul class="nav nav-pills mb-3" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link data-overlay active" id="areas" data-toggle="pill" href="#" role="tab" aria-controls="pills-rp3area" aria-selected="true">RP3 Areas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link data-overlay" id="blocks" data-toggle="pill" href="#" role="tab" aria-controls="pills-rp3blocks" aria-selected="false">RP3 Blocks</a>
+                            </li>
+                        </ul>
+
+                        <h6 class="card-title">Choose Statistic</h6>
+                        <ul class="nav nav-pills mb-3" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link stat active" id="number" data-toggle="pill" href="#" role="tab" aria-controls="pills-number" aria-selected="false"># Change</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link stat" id="percent" data-toggle="pill" href="#" role="tab" aria-controls="pills-percentage" aria-selected="true">% Change</a>
+                            </li>
+                        </ul>
+
+                        <h6 class="card-title">Show Change in Sales</h6>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="TotalPermits" name="customRadio" class="attribute custom-control-input" checked="checked">
+                            <label class="custom-control-label" for="TotalPermits">Total Permit</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="OwnerPermits" name="customRadio" class="attribute custom-control-input" autocomplete="off">
+                            <label class="custom-control-label" for="OwnerPermits">Homeowner Permit</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="RenterPermits" name="customRadio" class="attribute custom-control-input" autocomplete="off">
+                            <label class="custom-control-label" for="RenterPermits">Renter Permit</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Legend Panel -->
+        <div class="row pt-md-3">
+
+            <div class="pl-3 pb-1 z-500 d-md-none">
+                <button class="btn btn-dark btn-sm"  title="Map Legend" type="button" data-toggle="collapse" data-target="#legend" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle Map Legend">
+                    <i class="fas fa-align-left"></i>
+                </button>
+            </div>
+
+            <div id="legend" class="col-6 col-sm-4 col-md-3 col-lg-2 z-500 stop-prop collapse">
+                <div class="card bg-dark shadow custom-map-panel">
+                    <div id="legendBody" class="card-body">
+                        <h6 class="card-title mb-0">Change In Sales</h6>
+                        <div id="propSymbolLegend"></div>
+                        <div id='legendBlock'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Dependecies -->
+    <script src="https://kit.fontawesome.com/bead2088d4.js" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Bootstrap JS (with Popper.js included) -->
+    <script src="/lib/jquery/jquery-3.4.1.js"></script>
+    <script src="/lib/bootstrap/bootstrap.bundle.js"></script>
+    <!-- Mapping and charting --> 
+    <!-- <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script> -->
+    <script src="/lib/leaflet/leaflet-src.js"></script>  
+    <script src ="/js/dataview.js"></script>
+  </body>
+</html>

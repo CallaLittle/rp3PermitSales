@@ -1,0 +1,33 @@
+#map {
+    min-height: 93vh;
+}
+
+.z-500 {
+    z-index: 500;
+}
+
+
+.custom-control-label {
+    padding-top: 3px;
+}
+
+.fas {
+    font-size: 1.5rem;
+}
+
+#legendBlock {
+    line-height: 20px;
+}
+
+#legendBlock  i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+}
+
+
+.legend-text {
+    font-size: 10px;
+    fill:  white;
+}
