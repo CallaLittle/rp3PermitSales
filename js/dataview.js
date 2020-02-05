@@ -17,7 +17,7 @@
             "OwnerPermits2019": "2019 Owner Permits"
         },
         blocks: {
-            "addr": "Block Name",
+            "addr": "Block",
             "AreaNumber": "Area Number",
             "TotalPermits2018": "2018 Total Permits", 
             "TotalPermits2019": "2019 Total Permits",
@@ -377,7 +377,7 @@
 
     function calculateRadius(featureValue) {
         let positiveValue = Math.abs(featureValue),
-        removeZero = (positiveValue == 0 ? .5 : positiveValue),
+        removeZero = (positiveValue == 0 ? .4 : positiveValue),
         layerToBeSymbolized = currentMapLayer+currentStat,
         scaleFactor = SCALEFACTORS[layerToBeSymbolized];
 
